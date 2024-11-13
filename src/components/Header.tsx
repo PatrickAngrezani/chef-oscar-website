@@ -1,5 +1,6 @@
 import React from "react";
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Header = () => (
   <AppBar position="static" sx={{ backgroundColor: "#FF4500" }}>
@@ -23,6 +24,8 @@ const Header = () => (
             fontFamily: "Tangerine",
             fontSize: ".9vw",
           }}
+          component={Link}
+          to="/calzone"
         >
           Calzone
         </Button>
@@ -33,6 +36,8 @@ const Header = () => (
             fontFamily: "Tangerine",
             fontSize: ".9vw",
           }}
+          component={Link}
+          to="/pizza"
         >
           Pizza
         </Button>
@@ -43,6 +48,8 @@ const Header = () => (
             fontFamily: "Tangerine",
             fontSize: ".9vw",
           }}
+          component={Link}
+          to="/xis-pizza"
         >
           Xis Pizza
         </Button>
@@ -53,6 +60,8 @@ const Header = () => (
             fontFamily: "Tangerine",
             fontSize: ".9vw",
           }}
+          component={Link}
+          to="/xis"
         >
           Xis
         </Button>
