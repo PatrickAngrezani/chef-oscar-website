@@ -79,7 +79,7 @@ const Menu = () => {
       </Typography>
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Box sx={{ ...sectionTitleStyle }}>Refeições ao Dia</Box>
-        <Box sx={{ ...sectionTitleStyle }}>Refeições a Noite</Box>
+        <Box sx={{ ...sectionTitleStyle }}>Refeições à Noite</Box>
       </Box>
 
       <Box display="flex" justifyContent="space-between" mt={2}>
