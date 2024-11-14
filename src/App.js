@@ -5,14 +5,14 @@ import HeroSection from "./components/HeroSection.tsx";
 import MenuSection from "./components/MenuSection.tsx";
 import ContactSection from "./components/ContactSection.tsx";
 import Header from "./components/Header.tsx";
-import PizzaSection from "./components/PizzaSection.tsx"
+import SavoryPizzaSection from "./components/SavoryPizzaSection.tsx"
 
 function App() {
   return (
     <Router>
       <Box
         sx={{
-          fontFamily: "Arial, sans-serif",
+          fontFamily: "Tangerine, sans-serif",
           backgroundColor: "#fafafa",
         }}
       >
@@ -36,7 +36,7 @@ function App() {
               </>
             }
           />
-          <Route path="/pizza" element={<PizzaSection /> }/>
+          <Route path="/pizza" element={<SavoryPizzaSection /> }/>
         </Routes>
       </Box>
     </Router>
