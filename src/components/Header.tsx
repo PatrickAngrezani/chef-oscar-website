@@ -37,9 +37,21 @@ const Header = () => (
             fontSize: ".9vw",
           }}
           component={Link}
-          to="/pizza"
+          to="/pizzas-salgadas"
         >
-          Pizza
+          Pizzas Salgadas
+        </Button>
+        <Button
+          color="inherit"
+          sx={{ mx: 1 }}
+          style={{
+            fontFamily: "Tangerine",
+            fontSize: ".9vw",
+          }}
+          component={Link}
+          to="/pizzas-doces"
+        >
+          Pizzas Doces
         </Button>
         <Button
           color="inherit"
