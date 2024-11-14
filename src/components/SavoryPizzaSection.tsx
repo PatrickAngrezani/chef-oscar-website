@@ -1,4 +1,4 @@
-import { Box, List, ListItem, Typography } from "@mui/material";
+import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React from "react";
 import pizzaRoute from "../assets/pizza-bg-route.png";
 
@@ -126,7 +126,7 @@ const savoryFlavors: Pizza[] = [
   },
 ];
 
-function formatPizzaName(pizza) {
+function formatPizzaName(pizza: Pizza) {
   return pizza.description ? `${pizza.name}:` : pizza.name;
 }
 
@@ -142,6 +142,75 @@ const SavoryPizzaSection = () => {
         padding: "20px",
       }}
     >
+      {/* Information Block */}
+      <Box
+        sx={{
+          backgroundColor: "rgba(245, 221, 171, 0.9)", // Beige/yellowish color with slight transparency
+          borderRadius: "8px",
+          paddingTop: "10px",
+          paddingBottom: "10px",
+          maxWidth: "450px",
+          margin: "auto",
+          marginBottom: "20px",
+        }}
+      >
+        <Typography
+          variant="h2"
+          sx={{
+            fontFamily: "Tangerine",
+            fontSize: "2rem",
+            fontWeight: "bold",
+            color: "#4B2E2A",
+            textAlign: "center",
+            marginBottom: "10px",
+          }}
+        >
+          Tamanhos das nossas Pizzas
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: "Tangerine",
+            fontSize: "1rem",
+            color: "#4B2E2A",
+            textAlign: "center",
+          }}
+        >
+          <List sx={{ display: "inline-block", padding: 0 }}>
+            <ListItem sx={{ justifyContent: "center", padding: 0 }}>
+              <ListItemText
+                primary="45cm - 4 Sabores"
+                primaryTypographyProps={{
+                  sx: { fontSize: "1.2rem", color: "#4B2E2A" },
+                }}
+              />
+            </ListItem>
+            <ListItem sx={{ justifyContent: "center", padding: 0 }}>
+              <ListItemText
+                primary="40cm - 3 Sabores"
+                primaryTypographyProps={{
+                  sx: { fontSize: "1.2rem", color: "#4B2E2A" },
+                }}
+              />
+            </ListItem>
+            <ListItem sx={{ justifyContent: "center", padding: 0 }}>
+              <ListItemText
+                primary="35cm - 3 Sabores"
+                primaryTypographyProps={{
+                  sx: { fontSize: "1.2rem", color: "#4B2E2A" },
+                }}
+              />
+            </ListItem>
+            <ListItem sx={{ justifyContent: "center", padding: 0 }}>
+              <ListItemText
+                primary="25cm - 2 Sabores"
+                primaryTypographyProps={{
+                  sx: { fontSize: "1.2rem", color: "#4B2E2A" },
+                }}
+              />
+            </ListItem>
+          </List>
+        </Typography>
+      </Box>
       <Box
         sx={{
           position: "relative",
@@ -165,7 +234,7 @@ const SavoryPizzaSection = () => {
           Pizzas Salgadas
         </Typography>
         <List sx={{ paddingLeft: 2 }}>
-          {savoryFlavors.map((savoryFlavor, index) => (
+          {savoryFlavors.map((savoryFlavor: Pizza, index) => (
             <ListItem
               key={index}
               sx={{
@@ -204,7 +273,7 @@ const SavoryPizzaSection = () => {
                     <Typography
                       component="span"
                       sx={{
-                        color: "#666633",
+                        color: "black",
                         fontFamily: "Tangerine",
                         marginLeft: 1,
                         fontSize: "1.00rem",
