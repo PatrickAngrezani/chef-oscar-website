@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-import pizzaBG from "../assets/pizza-background.png";
+import pizzaBG from "../assets/background/pizza-background.png";
 
 const HeroSection = () => (
   <Box

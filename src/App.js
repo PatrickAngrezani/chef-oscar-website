@@ -7,6 +7,7 @@ import ContactSection from "./components/ContactSection.tsx";
 import Header from "./components/Header.tsx";
 import SavoryPizzaSection from "./components/SavoryPizzaSection.tsx";
 import SweetPizzaSection from "./components/SweetPizzaSection.tsx";
+import XisSection from "./components/XisSection.tsx";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           />
           <Route path="/pizzas-salgadas" element={<SavoryPizzaSection />} />
           <Route path="/pizzas-doces" element={<SweetPizzaSection />} />
+          <Route path="/xis" element={<XisSection />} />
         </Routes>
       </Box>
     </Router>

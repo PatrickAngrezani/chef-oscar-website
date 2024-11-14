@@ -1,7 +1,7 @@
 import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React from "react";
 
-import sweetPizzaBG from "../assets/sweetpizza-bg.png";
+import sweetPizzaBG from "../assets/background/sweetpizza-bg.png";
 import pizzaBanana from "../assets/menu-online/pizza/sweet/pizza-bananacanela.png";
 import pizzaBombom from "../assets/menu-online/pizza/sweet/pizza-bombom.png";
 import pizzaBrigadeiro from "../assets/menu-online/pizza/sweet/pizza-brigadeiro.jpeg";
@@ -93,7 +93,7 @@ const SweetPizzaSection = () => {
       {/* Information Block */}
       <Box
         sx={{
-          backgroundColor: "rgba(245, 221, 171, 0.9)", // Beige/yellowish color with slight transparency
+          backgroundColor: "rgba(245, 221, 171, 0.9)",
           borderRadius: "8px",
           paddingTop: "10px",
           paddingBottom: "10px",
@@ -126,7 +126,7 @@ const SweetPizzaSection = () => {
           <List sx={{ display: "inline-block", padding: 0 }}>
             <ListItem sx={{ justifyContent: "center", padding: 0 }}>
               <ListItemText
-                primary="45cm - 4 Sabores"
+                primary="45cm (4 Sabores) = R$ 79,90"
                 primaryTypographyProps={{
                   sx: { fontSize: "1.2rem", color: "#4B2E2A" },
                 }}
@@ -134,7 +134,7 @@ const SweetPizzaSection = () => {
             </ListItem>
             <ListItem sx={{ justifyContent: "center", padding: 0 }}>
               <ListItemText
-                primary="40cm - 3 Sabores"
+                primary="40cm (3 Sabores) = R$ 69,90"
                 primaryTypographyProps={{
                   sx: { fontSize: "1.2rem", color: "#4B2E2A" },
                 }}
@@ -142,7 +142,7 @@ const SweetPizzaSection = () => {
             </ListItem>
             <ListItem sx={{ justifyContent: "center", padding: 0 }}>
               <ListItemText
-                primary="35cm - 3 Sabores"
+                primary="35cm (3 Sabores) = R$ 59,90"
                 primaryTypographyProps={{
                   sx: { fontSize: "1.2rem", color: "#4B2E2A" },
                 }}
@@ -150,7 +150,7 @@ const SweetPizzaSection = () => {
             </ListItem>
             <ListItem sx={{ justifyContent: "center", padding: 0 }}>
               <ListItemText
-                primary="25cm - 2 Sabores"
+                primary="25cm (2 Sabores) = R$ 30,00"
                 primaryTypographyProps={{
                   sx: { fontSize: "1.2rem", color: "#4B2E2A" },
                 }}

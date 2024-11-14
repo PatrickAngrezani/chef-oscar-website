@@ -1,6 +1,6 @@
 import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React from "react";
-import pizzaRoute from "../assets/pizza-bg-route.png";
+import pizzaRoute from "../assets/background/pizza-bg-route.png";
 
 import pizzaBacon from "../assets/menu-online/pizza/pizza-bacon.jpeg";
 import pizzaBasca from "../assets/menu-online/pizza/pizza-basca.jpg";
@@ -178,7 +178,7 @@ const SavoryPizzaSection = () => {
           <List sx={{ display: "inline-block", padding: 0 }}>
             <ListItem sx={{ justifyContent: "center", padding: 0 }}>
               <ListItemText
-                primary="45cm - 4 Sabores"
+                primary="45cm (4 Sabores) = R$ 79,90"
                 primaryTypographyProps={{
                   sx: { fontSize: "1.2rem", color: "#4B2E2A" },
                 }}
@@ -186,7 +186,7 @@ const SavoryPizzaSection = () => {
             </ListItem>
             <ListItem sx={{ justifyContent: "center", padding: 0 }}>
               <ListItemText
-                primary="40cm - 3 Sabores"
+                primary="40cm (3 Sabores) = R$ 69,90"
                 primaryTypographyProps={{
                   sx: { fontSize: "1.2rem", color: "#4B2E2A" },
                 }}
@@ -194,7 +194,7 @@ const SavoryPizzaSection = () => {
             </ListItem>
             <ListItem sx={{ justifyContent: "center", padding: 0 }}>
               <ListItemText
-                primary="35cm - 3 Sabores"
+                primary="35cm (3 Sabores) = R$ 59,90"
                 primaryTypographyProps={{
                   sx: { fontSize: "1.2rem", color: "#4B2E2A" },
                 }}
@@ -202,7 +202,7 @@ const SavoryPizzaSection = () => {
             </ListItem>
             <ListItem sx={{ justifyContent: "center", padding: 0 }}>
               <ListItemText
-                primary="25cm - 2 Sabores"
+                primary="25cm (2 Sabores) = R$ 30,00"
                 primaryTypographyProps={{
                   sx: { fontSize: "1.2rem", color: "#4B2E2A" },
                 }}
