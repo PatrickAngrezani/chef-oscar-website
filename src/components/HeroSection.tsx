@@ -1,21 +1,23 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-import pizzaBG from "../assets/background/pizza-background.png";
+import oscarChefLogo from "../assets/background/chef-oscar-logo.jpg";
 
 const HeroSection = () => (
   <Box
     sx={{
       textAlign: "center",
-      backgroundImage: `url(${pizzaBG})`,
+      backgroundImage: `url(${oscarChefLogo})`,
       backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
       backgroundPosition: "center center",
-      padding: "100px 20px",
+      width: "100%",
+      height: "100vh",
       paddingTop: "30px",
       color: "#fff",
     }}
   >
-    <Typography
+    {/* <Typography
       variant="h2"
       sx={{
         fontWeight: "bold",
@@ -38,7 +40,7 @@ const HeroSection = () => (
       }}
     >
       Sabor e Qualidade Diariamente
-    </Typography>
+    </Typography> */}
   </Box>
 );
 
