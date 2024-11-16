@@ -4,18 +4,22 @@ import { Link } from "react-router-dom";
 
 const Header = () => (
   <AppBar position="static" sx={{ backgroundColor: "#FF4500" }}>
-    <Toolbar>
-      <Typography
-        variant="h6"
-        sx={{ flexGrow: 1 }}
+    <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Button
+        color="inherit"
         style={{
+          textAlign: "left",
           fontFamily: "Tangerine",
           fontSize: "1.3vw",
           fontStyle: "italic",
+          minWidth: "unset",
+          textTransform: "none",
         }}
+        component={Link}
+        to="/"
       >
         Oscar Chef
-      </Typography>
+      </Button>
       <Box>
         <Button
           color="inherit"
