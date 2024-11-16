@@ -8,7 +8,6 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import kitchenBG from "../assets/background/kitchen-bg.png";
 
 const xisFlavors = [
   {
@@ -92,13 +91,13 @@ const XisSection = () => {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${kitchenBG})`,
-        backgroundPosition: "center center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        position: "relative",
-        padding: "20px",
+        minHeight: "100%",
+        display: "flex",
+        justifyContent: "center",
+        allignItens: "center",
+        background: "linear-gradient(135deg, #FF4500, #FFD700, #FF6347)",
         maxWidth: "100%",
+        position: "relative",
       }}
     >
       <Box
@@ -107,6 +106,7 @@ const XisSection = () => {
           borderRadius: "8px",
           paddingTop: "10px",
           paddingBottom: "10px",
+          width: "70%",
           maxWidth: "800px",
           margin: "auto",
           marginBottom: "20px",
