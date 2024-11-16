@@ -10,7 +10,7 @@ const Header = () => (
         style={{
           textAlign: "left",
           fontFamily: "Tangerine",
-          fontSize: "1.3vw",
+          fontSize: "1.5vw",
           fontStyle: "italic",
           minWidth: "unset",
           textTransform: "none",
@@ -26,19 +26,8 @@ const Header = () => (
           sx={{ mx: 1 }}
           style={{
             fontFamily: "Tangerine",
-            fontSize: ".9vw",
-          }}
-          component={Link}
-          to="/calzone"
-        >
-          Calzone
-        </Button>
-        <Button
-          color="inherit"
-          sx={{ mx: 1 }}
-          style={{
-            fontFamily: "Tangerine",
-            fontSize: ".9vw",
+            fontSize: "1.1vw",
+            textTransform: "none",
           }}
           component={Link}
           to="/pizzas-salgadas"
@@ -50,7 +39,8 @@ const Header = () => (
           sx={{ mx: 1 }}
           style={{
             fontFamily: "Tangerine",
-            fontSize: ".9vw",
+            fontSize: "1.1vw",
+            textTransform: "none",
           }}
           component={Link}
           to="/pizzas-doces"
@@ -62,19 +52,21 @@ const Header = () => (
           sx={{ mx: 1 }}
           style={{
             fontFamily: "Tangerine",
-            fontSize: ".9vw",
+            fontSize: "1.1vw",
+            textTransform: "none",
           }}
           component={Link}
-          to="/xis-pizza"
+          to="/pratos-variados"
         >
-          Xis Pizza
+          Pratos Variados
         </Button>
         <Button
           color="inherit"
           sx={{ mx: 1 }}
           style={{
             fontFamily: "Tangerine",
-            fontSize: ".9vw",
+            fontSize: "1.1vw",
+            textTransform: "none",
           }}
           component={Link}
           to="/xis"
