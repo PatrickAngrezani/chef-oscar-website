@@ -12,7 +12,7 @@ const HeroSection = () => (
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center center",
       width: "100%",
-      height: "100vh",
+      height: "80vh",
       paddingTop: "30px",
       color: "#fff",
     }}
