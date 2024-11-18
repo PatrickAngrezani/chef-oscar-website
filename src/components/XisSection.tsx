@@ -140,6 +140,7 @@ const XisSection = () => {
                   alt={flavor.name}
                   variant="rounded"
                   sx={{
+                    marginLeft: "20px",
                     width: 75,
                     height: 75,
                     marginRight: "15px",
@@ -165,9 +166,16 @@ const XisSection = () => {
                   <Typography
                     variant="body2"
                     sx={{
-                      color: "#4B2E2A",
-                      fontFamily: "Arial, sans-serif",
-                      fontSize: "1rem",
+                      color: "black",
+                      fontFamily: "Tangerine",
+                      marginLeft: 1,
+                      fontSize: "1.00rem",
+                      maxHeight: "6rem",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      display: "-webkit-box",
+                      WebkitBoxOrient: "vertical",
+                      WebkitLineClamp: 3,
                     }}
                   >
                     {flavor.description}
