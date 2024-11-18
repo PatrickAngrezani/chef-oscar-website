@@ -23,52 +23,52 @@ interface Pizza {
 const sweetFlavors: Pizza[] = [
   {
     name: "Banana com Canela",
-    description: "Banana, Canela, Açucar e Mussarela",
+    description: "Banana, Canela, Açucar e Muçarela",
     image: pizzaBanana,
   },
   {
     name: "Bombom",
-    description: "Bombom, Leite Condensado e Mussarela",
+    description: "Bombom, Leite Condensado e Muçarela",
     image: pizzaBombom,
   },
   {
     name: "Brigadeiro",
-    description: "Chocolate Granulado, Chocolate ao Leite e Mussarela",
+    description: "Chocolate Granulado, Chocolate ao Leite e Muçarela",
     image: pizzaBrigadeiro,
   },
   {
     name: "Chocolate Branco",
-    description: "Chocolate Branco e Mussarela",
+    description: "Chocolate Branco e Muçarela",
     image: pizzaChocolateBranco,
   },
   {
     name: "Chocolate Preto",
-    description: "Chocolate ao Leite e Mussarela",
+    description: "Chocolate ao Leite e Muçarela",
     image: pizzaChocolatePreto,
   },
   {
     name: "Pizza de Côco",
-    description: "Côco, Leite Condensado e Mussarela",
+    description: "Côco, Leite Condensado e Muçarela",
     image: pizzaCoco,
   },
   {
     name: "Confete Chocolate ao Leite",
-    description: "Chocolate ao Leite, Confeitos e Mussarela",
+    description: "Chocolate ao Leite, Confeitos e Muçarela",
     image: pizzaChocoConfetes,
   },
   {
     name: "Confete Chocolate Branco",
-    description: "Chocolate Branco, Confeitos e Mussarela",
+    description: "Chocolate Branco, Confeitos e Muçarela",
     image: pizzaBrancoConfetes,
   },
   {
     name: "Pizza de Prestígio",
-    description: "Chocolate ao Leite, Côco, Leite Condensado e Mussarela",
+    description: "Chocolate ao Leite, Côco, Leite Condensado e Muçarela",
     image: pizzaPrestigio,
   },
   {
     name: "Pizza Véu de Noiva",
-    description: "Chocolate Branco, Côco, Leite Condensado e Mussarela",
+    description: "Chocolate Branco, Côco, Leite Condensado e Muçarela",
     image: pizzaVeuNoiva,
   },
 ];

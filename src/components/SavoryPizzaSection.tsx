@@ -110,18 +110,18 @@ const savoryFlavors: Pizza[] = [
   },
   {
     name: "Quatro Queijos",
-    description: "Gorgonzola, Mussarela, Parmesão, Provolone",
+    description: "Gorgonzola, Muçarela, Parmesão, Provolone",
     image: pizza4Queijos,
   },
   {
     name: "Cinco Quejos",
-    description: "Chedder, Grongonzola, Mussarela, Parmesão, Provolone",
+    description: "Chedder, Grongonzola, Muçarela, Parmesão, Provolone",
     image: pizza5Queijos,
   },
   {
     name: "Seis Quejos",
     description:
-      "Catupiry, Chedder, Gorgonzola, Mussarela, Parmesão e Provolone",
+      "Catupiry, Chedder, Gorgonzola, Muçarela, Parmesão e Provolone",
     image: pizza6Queijos,
   },
 ];
