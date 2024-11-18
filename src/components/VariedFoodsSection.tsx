@@ -2,6 +2,8 @@ import { Box, List, ListItem, Typography } from "@mui/material";
 import React from "react";
 
 import oscarLogo from "../assets/background/chef-oscar-logo.jpg";
+
+import bauruImg from "../assets/menu-online/varied-foods/bauru.png";
 import calzoneImg from "../assets/menu-online/varied-foods/calzone.jpg";
 import farfalleImg from "../assets/menu-online/varied-foods/farfalle-macarrao.jpg";
 import iscaPeixeImg from "../assets/menu-online/varied-foods/isca-peixe.jpg";
@@ -10,7 +12,21 @@ import pratoFit from "../assets/menu-online/varied-foods/fit.png";
 import sanduiche from "../assets/menu-online/varied-foods/sanduiche-com-massa.jpg";
 import sanduiche2 from "../assets/menu-online/varied-foods/sanduiche-2.jpg";
 
-const VariedFoods = [
+interface Food {
+  name: string;
+  description;
+  image: string;
+  observation?: string;
+}
+
+const VariedFoods: Food[] = [
+  {
+    name: "Baurú",
+    description:
+      "Bife de alcatra, presunto, ovo, maionese a gosto, queijo, tomate e alface",
+    image: bauruImg,
+    observation: "Pimenta a gosto",
+  },
   {
     name: "Calzone",
     description: "Peça nos mesmos sabores conforme o Cardápio de Pizza",
@@ -90,7 +106,7 @@ const VariedFoodsSection = () => {
         </Typography>
 
         <List>
-          {VariedFoods.map((food, index) => (
+          {VariedFoods.map((food: Food, index) => (
             <ListItem
               key={index}
               sx={{
@@ -144,6 +160,21 @@ const VariedFoodsSection = () => {
                     >
                       {food.description}
                     </Typography>
+                    {/* Observation, if any */}
+                    {food.observation && (
+                      <Typography
+                        variant="caption"
+                        sx={{
+                          color: "#8B5E3C",
+                          fontFamily: "Tangerine",
+                          marginLeft: 2,
+                          fontSize: "0.90rem",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        * {food.observation}
+                      </Typography>
+                    )}
                   </Box>
                 </Box>
               </Box>
