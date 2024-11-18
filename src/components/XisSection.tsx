@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import oscarLogo from "../assets/background/chef-oscar-logo.jpg";
 
 const xisFlavors = [
   {
@@ -91,13 +92,14 @@ const XisSection = () => {
   return (
     <Box
       sx={{
-        minHeight: "100%",
-        display: "flex",
-        justifyContent: "center",
-        allignItens: "center",
-        background: "linear-gradient(135deg, #FF4500, #FFD700, #FF6347)",
-        maxWidth: "100%",
+        backgroundAttachment: "fixed",
+        backgroundImage: `url(${oscarLogo})`,
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
         position: "relative",
+        padding: "20px",
+        minHeight: "100vh",
       }}
     >
       <Box
