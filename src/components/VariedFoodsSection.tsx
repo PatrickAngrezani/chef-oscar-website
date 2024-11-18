@@ -105,6 +105,7 @@ const VariedFoodsSection = () => {
                 src={food.image}
                 alt={food.name}
                 sx={{
+                  marginLeft: "20px",
                   width: "80px",
                   height: "80px",
                   objectFit: "cover",

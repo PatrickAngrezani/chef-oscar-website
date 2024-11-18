@@ -279,6 +279,12 @@ const SavoryPizzaSection = () => {
                         fontFamily: "Tangerine",
                         marginLeft: 1,
                         fontSize: "1.00rem",
+                        maxHeight: "6rem",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        display: "-webkit-box",
+                        WebkitBoxOrient: "vertical",
+                        WebkitLineClamp: 3,
                       }}
                     >
                       {savoryFlavor.description}
