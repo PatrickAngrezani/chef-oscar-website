@@ -10,81 +10,56 @@ import {
 import React from "react";
 import oscarLogo from "../assets/background/chef-oscar-logo.jpg";
 
+import XBacon from "../assets/menu-online/xis/xis-bacon.jpeg";
+import XCalabresa from "../assets/menu-online/xis/xis-calabresa.jpeg";
+import XCoracao from "../assets/menu-online/xis/xis-coracao.jpg";
+import XFrango from "../assets/menu-online/xis/xis-frango.jpeg";
+import XSalada from "../assets/menu-online/xis/xis-salada.jpeg";
+import XStrogonoff from "../assets/menu-online/xis/xis-strogonoff.jpeg";
+import XVegetariano from "../assets/menu-online/xis/xis-vegetariano.jpg";
+
 const xisFlavors = [
   {
     name: "Xis Bacon",
-    description: "Bacon, cheese, lettuce, tomato",
-    image: "/path/to/image1.jpg",
+    description:
+      "Hambúrguer bovino, bacon frito, queijo muçarela, alface, tomate, maionese, ketchup, mostarda, milho e ervilha.",
+    image: XBacon,
   },
   {
     name: "Xis Calabresa",
-    description: "Calabresa sausage, cheese, lettuce, tomato",
-    image: "/path/to/image2.jpg",
-  },
-  {
-    name: "Xis Frango",
-    description: "Grilled chicken, cheese, lettuce, tomato",
-    image: "/path/to/image3.jpg",
+    description:
+      " Calabresa frita, queijo muçarela, alface, tomate, maionese, ketchup, mostarda, milho e ervilha.",
+    image: XCalabresa,
   },
   {
     name: "Xis Coração",
-    description: "Grilled heart, cheese, lettuce, tomato",
-    image: "/path/to/image4.jpg",
+    description:
+      "Coração de frango, queijo muçarela, alface, tomate, maionese, ketchup, mostarda, milho e ervilha.",
+    image: XCoracao,
   },
   {
-    name: "Xis Bacon Egg",
-    description: "Bacon, egg, cheese, lettuce, tomato",
-    image: "/path/to/image5.jpg",
+    name: "Xis Frango",
+    description:
+      "Frango em cubos, queijo muçarela, alface, tomate, maionese, ketchup, mostarda, milho e ervilha.",
+    image: XFrango,
   },
   {
-    name: "Xis Filé",
-    description: "Steak, cheese, lettuce, tomato",
-    image: "/path/to/image6.jpg",
-  },
-  {
-    name: "Xis Vegetariano",
-    description: "Grilled vegetables, cheese, lettuce, tomato",
-    image: "/path/to/image7.jpg",
-  },
-  {
-    name: "Xis Alcatra",
-    description: "Alcatra beef, cheese, lettuce, tomato",
-    image: "/path/to/image8.jpg",
-  },
-  {
-    name: "Xis Picanha",
-    description: "Picanha beef, cheese, lettuce, tomato",
-    image: "/path/to/image9.jpg",
-  },
-  {
-    name: "Xis Costela",
-    description: "Rib meat, cheese, lettuce, tomato",
-    image: "/path/to/image10.jpg",
-  },
-  {
-    name: "Xis Pepperoni",
-    description: "Pepperoni, cheese, lettuce, tomato",
-    image: "/path/to/image11.jpg",
-  },
-  {
-    name: "Xis Salame",
-    description: "Salami, cheese, lettuce, tomato",
-    image: "/path/to/image12.jpg",
-  },
-  {
-    name: "Xis Parma",
-    description: "Parma ham, cheese, lettuce, tomato",
-    image: "/path/to/image13.jpg",
+    name: "Xis Salada",
+    description:
+      "Hambúrguer bovino, queijo muçarela, alface, tomate, cebola, maionese, ketchup, mostarda, milho e ervilha.",
+    image: XSalada,
   },
   {
     name: "Xis Strogonoff",
-    description: "Stroganoff meat, cheese, lettuce, tomato",
-    image: "/path/to/image14.jpg",
+    description:
+      "Strogonoff de carne, batata palha, queijo muçarela, alface, tomate, cebola, maionese, ketchup, mostarda, milho e ervilha.",
+    image: XStrogonoff,
   },
   {
-    name: "Xis Tradicional",
-    description: "Beef patty, cheese, lettuce, tomato",
-    image: "/path/to/image15.jpg",
+    name: "Xis Vegetariano",
+    description:
+      "Hambúrguer vegetariano (proteína de soja), alface, tomate, maionese(vegetal), ketchup, mostarda, milho e ervilha.",
+    image: XVegetariano,
   },
 ];
 
