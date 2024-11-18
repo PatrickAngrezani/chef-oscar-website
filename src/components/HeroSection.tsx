@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 import oscarChefLogo from "../assets/background/chef-oscar-logo.jpg";
 

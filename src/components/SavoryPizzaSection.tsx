@@ -1,6 +1,6 @@
 import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React from "react";
-import pizzaRoute from "../assets/background/pizza-bg-route.png";
+import oscarLogo from "../assets/background/chef-oscar-logo.jpg";
 
 import pizzaBacon from "../assets/menu-online/pizza/pizza-bacon.jpeg";
 import pizzaBasca from "../assets/menu-online/pizza/pizza-basca.jpg";
@@ -134,18 +134,20 @@ const SavoryPizzaSection = () => {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${pizzaRoute})`,
+        backgroundAttachment: "fixed",
+        backgroundImage: `url(${oscarLogo})`,
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         position: "relative",
         padding: "20px",
+        minHeight: "100vh",
       }}
     >
       {/* Information Block */}
       <Box
         sx={{
-          backgroundColor: "rgba(245, 221, 171, 0.9)", // Beige/yellowish color with slight transparency
+          backgroundColor: "rgba(245, 221, 171, 0.9)",
           borderRadius: "8px",
           paddingTop: "10px",
           paddingBottom: "10px",

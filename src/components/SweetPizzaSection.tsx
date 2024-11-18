@@ -1,7 +1,7 @@
 import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React from "react";
 
-import sweetPizzaBG from "../assets/background/sweetpizza-bg.png";
+import oscarLogo from "../assets/background/chef-oscar-logo.jpg";
 import pizzaBanana from "../assets/menu-online/pizza/sweet/pizza-bananacanela.png";
 import pizzaBombom from "../assets/menu-online/pizza/sweet/pizza-bombom.png";
 import pizzaBrigadeiro from "../assets/menu-online/pizza/sweet/pizza-brigadeiro.jpeg";
@@ -81,13 +81,14 @@ const SweetPizzaSection = () => {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${sweetPizzaBG})`,
+        backgroundAttachment: "fixed",
+        backgroundImage: `url(${oscarLogo})`,
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         position: "relative",
         padding: "20px",
-        maxWidth: "100%",
+        minHeight: "100vh",
       }}
     >
       {/* Information Block */}
