@@ -3,65 +3,68 @@ import React from "react";
 
 import oscarLogo from "../assets/background/chef-oscar-logo.jpg";
 
+import batataFritaImg from "../assets/menu-online/varied-foods/batata-frita.jpeg";
 import bauruImg from "../assets/menu-online/varied-foods/bauru.png";
-import calzoneImg from "../assets/menu-online/varied-foods/calzone.jpg";
-import farfalleImg from "../assets/menu-online/varied-foods/farfalle-macarrao.jpg";
+import cachorroQuenteImg from "../assets/menu-online/varied-foods/cachorro-quente.jpeg";
 import iscaPeixeImg from "../assets/menu-online/varied-foods/isca-peixe.jpg";
-import xpizzaImg from "../assets/menu-online/varied-foods/xis-pizza.jpeg";
-import pratoFit from "../assets/menu-online/varied-foods/fit.png";
-import sanduiche from "../assets/menu-online/varied-foods/sanduiche-com-massa.jpg";
-import sanduiche2 from "../assets/menu-online/varied-foods/sanduiche-2.jpg";
+import parmegianaImg from "../assets/menu-online/varied-foods/parmegiana.jpg";
+import peixeGrelhadoImg from "../assets/menu-online/varied-foods/peixe-grelhado.jpg";
+import picadaoImg from "../assets/menu-online/varied-foods/picadao.jpeg";
 
 interface Food {
   name: string;
-  description;
+  description?: string;
   image: string;
   observation?: string;
+  price: string;
 }
 
 const VariedFoods: Food[] = [
   {
+    name: "Batata Frita",
+    image: batataFritaImg,
+    observation: "Adicionais: Bacon e queijo.",
+    price: "R$ 25,00",
+  },
+  {
     name: "Baurú",
     description:
-      "Bife de alcatra, presunto, ovo, maionese a gosto, queijo, tomate e alface",
+      "Bife de coxão mole, presunto, ovo, maionese a gosto, queijo, alface, tomate e cebola",
     image: bauruImg,
-    observation: "Pimenta a gosto",
+    observation: "Pimenta a gosto.",
+    price: "R$ 30,00",
   },
   {
-    name: "Calzone",
-    description: "Peça nos mesmos sabores conforme o Cardápio de Pizza",
-    image: calzoneImg,
-  },
-  {
-    name: "Farfalle",
+    name: "Cachorro-Quente",
     description:
-      "Macarrão de trigo com almondegas assadas de filé de Frango em Molho de tomate e salada na tigela.",
-    image: farfalleImg,
+      "Salsicha, bacon, queijo, tomate, milho, ervilha, batata-palha, pimenta, maionese, ketchup e mostarda a gosto",
+    image: cachorroQuenteImg,
+    price: "R$ 25,00",
   },
   {
     name: "Iscas de Peixe",
     description: "Ao Molho Tártaro",
     image: iscaPeixeImg,
+    price: "R$ 30,00",
   },
   {
-    name: "Prato Fit",
-    description: "Ingredientes",
-    image: pratoFit,
+    name: "Parmegiana",
+    description: "Filé empanado, molho vermelho, queijo muçarela e parmesão",
+    image: parmegianaImg,
+    price: "R$ 27,00",
   },
   {
-    name: "Sanduiche",
-    description: "Ingredientes",
-    image: sanduiche,
+    name: "Peixe Grelhado",
+    description: "Alface, tomate, batata e limão",
+    image: peixeGrelhadoImg,
+    price: "R$ 30,00",
   },
   {
-    name: "Sanduiche 2",
-    description: "Ingredientes",
-    image: sanduiche2,
-  },
-  {
-    name: "XPizza",
-    description: "Peça nos mesmos sabores conforme o Cardápio de Pizza",
-    image: xpizzaImg,
+    name: "Picadão",
+    description:
+      "Azeitona, calabresa, codorna, coração, pepino, frango, presunto, queijo, carne e alface",
+    image: picadaoImg,
+    price: "R$ 90,00",
   },
 ];
 
@@ -122,7 +125,7 @@ const VariedFoodsSection = () => {
                 alt={food.name}
                 sx={{
                   marginLeft: "20px",
-                  width: "80px",
+                  width: "100px",
                   height: "80px",
                   objectFit: "cover",
                   borderRadius: "8px",
@@ -130,54 +133,55 @@ const VariedFoodsSection = () => {
                   flexShrink: 0,
                 }}
               />
-              <Box sx={{ display: "flex", flexDirection: "column" }}>
-                <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+                <Typography
+                  sx={{
+                    color: "#4B2E2A",
+                    fontWeight: "bold",
+                    fontFamily: "Tangerine",
+                    fontSize: "1.75rem",
+                  }}
+                >
+                  {food.name}
+                </Typography>
+                {food.description && (
                   <Typography
                     sx={{
-                      color: "#4B2E2A",
-                      fontWeight: "bold",
+                      color: "black",
                       fontFamily: "Tangerine",
-                      fontSize: "1.75rem",
+                      fontSize: "1.00rem",
+                      marginTop: "5px",
                     }}
                   >
-                    {food.name}:
+                    {food.description}
                   </Typography>
-                  <Box sx={{}}>
-                    <Typography
-                      component="span"
-                      sx={{
-                        color: "black",
-                        fontFamily: "Tangerine",
-                        marginLeft: 1,
-                        fontSize: "1.00rem",
-                        maxHeight: "6rem",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        display: "-webkit-box",
-                        WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 3,
-                      }}
-                    >
-                      {food.description}
-                    </Typography>
-                    {/* Observation, if any */}
-                    {food.observation && (
-                      <Typography
-                        variant="caption"
-                        sx={{
-                          color: "#8B5E3C",
-                          fontFamily: "Tangerine",
-                          marginLeft: 2,
-                          fontSize: "0.90rem",
-                          fontWeight: "bold",
-                        }}
-                      >
-                        * {food.observation}
-                      </Typography>
-                    )}
-                  </Box>
-                </Box>
+                )}
+                {food.observation && (
+                  <Typography
+                    variant="caption"
+                    sx={{
+                      color: "#8B5E3C",
+                      fontFamily: "Tangerine",
+                      fontSize: "0.90rem",
+                      fontWeight: "bold",
+                      marginTop: "5px",
+                    }}
+                  >
+                    {food.observation}
+                  </Typography>
+                )}
               </Box>
+              <Typography
+                sx={{
+                  color: "#4B2E2A",
+                  fontWeight: "bold",
+                  fontFamily: "Tangerine",
+                  fontSize: "1.5rem",
+                  marginRight: "20px",
+                }}
+              >
+                {food.price}
+              </Typography>
             </ListItem>
           ))}
         </List>

@@ -2,11 +2,11 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 
 import imgAlaminuta from "../assets/alaminuta.jpeg";
-import imgCalzone from "../assets/calzone.jpg";
-import imgChurrasquinho from "../assets/churrasquinho.jpeg";
+import imgBauru from "../assets/menu-online/varied-foods/bauru.png";
+import imgCachorroquente from "../assets/menu-online/varied-foods/cachorro-quente.jpeg";
+import imgParmegiana from "../assets/menu-online/varied-foods/parmegiana.jpg";
 import imgPizza from "../assets/pizza.jpeg";
 import imgPratoFeito from "../assets/prato-feito.jpg";
-import imgXisPizza from "../assets/xis-pizza.jpeg";
 import imgXis from "../assets/xis.jpeg";
 
 interface MenuItems {
@@ -14,17 +14,13 @@ interface MenuItems {
   image: string;
 }
 
-const dayMenuItems: MenuItems[] = [
+const menuItems: MenuItems[] = [
   { name: "Ala Minuta", image: imgAlaminuta },
+  { name: "Bauru", image: imgBauru },
+  { name: "Cachorro-Quente", image: imgCachorroquente },
+  { name: "Parmegiana", image: imgParmegiana },
   { name: "Prato Feito", image: imgPratoFeito },
-];
-
-const nightMenuItems: MenuItems[] = [
-  { name: "Ala Minuta", image: imgAlaminuta },
-  { name: "Calzone", image: imgCalzone },
-  { name: "Churrasquinho", image: imgChurrasquinho },
   { name: "Pizza", image: imgPizza },
-  { name: "Xis Pizza", image: imgXisPizza },
   { name: "Xis", image: imgXis },
 ];
 
@@ -61,6 +57,11 @@ const Menu = () => {
       sx={{
         padding: "20px",
         backgroundColor: "rgb(245, 241, 230)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
       }}
     >
       <Typography
@@ -77,50 +78,33 @@ const Menu = () => {
       >
         Nosso Menu
       </Typography>
-      <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Box sx={{ ...sectionTitleStyle }}>Refeições ao Dia</Box>
-        <Box sx={{ ...sectionTitleStyle }}>Refeições à Noite</Box>
+      <Box sx={{ ...sectionTitleStyle, marginBottom: "20px" }}>
+        Pratos Principais
       </Box>
 
-      <Box display="flex" justifyContent="space-between" mt={2}>
-        <Grid container spacing={2} xs={6}>
-          {dayMenuItems.map((item, index) => (
-            <Grid item xs={6} key={index}>
-              <Box sx={menuBoxStyle}>
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  style={{
-                    width: "100%",
-                    height: "150px",
-                    objectFit: "cover",
-                  }}
-                />
-                <Box sx={nameOverlayStyle}>{item.name}</Box>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-
-        <Grid container spacing={2} xs={6}>
-          {nightMenuItems.map((item, index) => (
-            <Grid item xs={6} key={index}>
-              <Box sx={menuBoxStyle}>
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  style={{
-                    width: "100%",
-                    height: "150px",
-                    objectFit: "cover",
-                  }}
-                />
-                <Box sx={nameOverlayStyle}>{item.name}</Box>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
+      <Grid
+        container
+        spacing={3}
+        justifyContent="center"
+        sx={{ maxWidth: "900px" }}
+      >
+        {menuItems.map((item, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Box sx={menuBoxStyle}>
+              <img
+                src={item.image}
+                alt={item.name}
+                style={{
+                  width: "100%",
+                  height: "150px",
+                  objectFit: "cover",
+                }}
+              />
+              <Box sx={nameOverlayStyle}>{item.name}</Box>
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 };

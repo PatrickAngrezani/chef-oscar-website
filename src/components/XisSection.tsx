@@ -16,7 +16,6 @@ import XCoracao from "../assets/menu-online/xis/xis-coracao.jpg";
 import XFrango from "../assets/menu-online/xis/xis-frango.jpeg";
 import XSalada from "../assets/menu-online/xis/xis-salada.jpeg";
 import XStrogonoff from "../assets/menu-online/xis/xis-strogonoff.jpeg";
-import XVegetariano from "../assets/menu-online/xis/xis-vegetariano.jpg";
 
 const xisFlavors = [
   {
@@ -54,12 +53,6 @@ const xisFlavors = [
     description:
       "Strogonoff de carne, batata palha, queijo muçarela, alface, tomate, cebola, maionese, ketchup, mostarda, milho e ervilha.",
     image: XStrogonoff,
-  },
-  {
-    name: "Xis Vegetariano",
-    description:
-      "Hambúrguer vegetariano (proteína de soja), alface, tomate, maionese(vegetal), ketchup, mostarda, milho e ervilha.",
-    image: XVegetariano,
   },
 ];
 

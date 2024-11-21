@@ -91,7 +91,6 @@ const SweetPizzaSection = () => {
         minHeight: "100vh",
       }}
     >
-      {/* Information Block */}
       <Box
         sx={{
           backgroundColor: "rgba(245, 221, 171, 0.9)",

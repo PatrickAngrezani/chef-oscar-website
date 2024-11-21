@@ -19,15 +19,15 @@ const ContactSection = () => (
     </Typography>
     <Typography variant="h6" sx={{ marginBottom: 2, fontFamily: "Tangerine" }}>
       Ligue agora:{" "}
-      <Button color="inherit" href="tel:51-990117688" startIcon={<PhoneIcon />}>
-        51-990117688
+      <Button color="inherit" href="tel:51-992333927" startIcon={<PhoneIcon />}>
+        (51) 99233-3927
+      </Button>
+      <Button color="inherit" href="tel:51-30849494" startIcon={<PhoneIcon />}>
+        (51) 3084-9494
       </Button>
     </Typography>
     <Typography variant="h5" sx={{ marginBottom: 2, fontFamily: "Tangerine" }}>
       Endereço: Rua Armando Barbedo 1043 - Porto Alegre, RS
-    </Typography>
-    <Typography variant="h6" sx={{ marginBottom: 2, fontFamily: "Tangerine" }}>
-      Frango assado disponível aos sábados, domingos e feriados
     </Typography>
   </Box>
 );

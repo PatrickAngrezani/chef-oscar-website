@@ -21,12 +21,38 @@ import pizza4Queijos from "../assets/menu-online/pizza/pizza-4-queijos.jpeg";
 import pizza5Queijos from "../assets/menu-online/pizza/pizza-5-queijos.jpeg";
 import pizza6Queijos from "../assets/menu-online/pizza/pizza-6-queijos.png";
 
+import calzoneImg from "../assets/calzone.jpg";
+import xpizzaImg from "../assets/xis-pizza.jpeg";
+
 interface Pizza {
   name: string;
   description?: string;
   image?: string;
   observation?: string;
+  prices?: { size: string; value: string }[];
 }
+
+const calzoneAndXisPizzas: Pizza[] = [
+  {
+    name: "Calzone",
+    description: "Recheado com presunto, queijo, tomate e orégano",
+    observation: "Disponível nos mesmos sabores de pizza",
+    image: calzoneImg,
+    prices: [
+      { size: "25cm", value: "R$ 30,00" },
+      { size: "35cm", value: "R$ 64,90" },
+      { size: "40cm", value: "R$ 74,90" },
+      { size: "45cm", value: "R$ 89,90" },
+    ],
+  },
+  {
+    name: "Xis Pizza",
+    description: "Pizza recheada ao estilo sanduíche",
+    observation: "Disponível nos mesmos sabores de pizza",
+    image: xpizzaImg,
+    prices: [{ size: "Padrão", value: "R$ 35,00" }],
+  },
+];
 
 const savoryFlavors: Pizza[] = [
   {
@@ -144,7 +170,6 @@ const SavoryPizzaSection = () => {
         minHeight: "100vh",
       }}
     >
-      {/* Information Block */}
       <Box
         sx={{
           backgroundColor: "rgba(245, 221, 171, 0.9)",
@@ -215,52 +240,61 @@ const SavoryPizzaSection = () => {
       </Box>
       <Box
         sx={{
+          backgroundAttachment: "fixed",
+          backgroundImage: `url(${oscarLogo})`,
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
           position: "relative",
-          backgroundColor: "rgb(245, 241, 230, 0.9)",
-          borderRadius: "8px",
           padding: "20px",
-          maxWidth: "900px",
-          margin: "auto",
+          minHeight: "100vh",
         }}
       >
-        <Typography
-          variant="h1"
-          style={{
-            fontFamily: "Tangerine",
-            fontSize: "2.5rem",
-            marginBottom: "15px",
-            color: "#4B2E2A",
-            fontWeight: "bold",
+        {/* Pizzas Salgadas */}
+        <Box
+          sx={{
+            position: "relative",
+            backgroundColor: "rgb(245, 241, 230, 0.9)",
+            borderRadius: "8px",
+            padding: "20px",
+            maxWidth: "900px",
+            margin: "auto",
           }}
         >
-          Pizzas Salgadas
-        </Typography>
-        <List sx={{ paddingLeft: 2 }}>
-          {savoryFlavors.map((savoryFlavor: Pizza, index) => (
-            <ListItem
-              key={index}
-              sx={{
-                paddingLeft: 0,
-                display: "flex",
-                alignItems: "center",
-                marginBottom: 1,
-              }}
-            >
-              {/* Image thumbnail */}
-              <Box
-                component="img"
-                src={savoryFlavor.image}
-                alt={savoryFlavor.name}
+          <Typography
+            variant="h1"
+            style={{
+              fontFamily: "Tangerine",
+              fontSize: "2.5rem",
+              marginBottom: "15px",
+              color: "#4B2E2A",
+              fontWeight: "bold",
+            }}
+          >
+            Pizzas Salgadas
+          </Typography>
+          <List sx={{ paddingLeft: 2 }}>
+            {savoryFlavors.map((savoryFlavor: Pizza, index) => (
+              <ListItem
+                key={index}
                 sx={{
-                  height: 80,
-                  borderRadius: "10%",
-                  marginRight: 2,
+                  paddingLeft: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  marginBottom: 1,
                 }}
-              />
-
-              {/* Text content */}
-              <Box sx={{ display: "flex", flexDirection: "column" }}>
-                <Box sx={{ display: "flex", alignItems: "center" }}>
+              >
+                <Box
+                  component="img"
+                  src={savoryFlavor.image}
+                  alt={savoryFlavor.name}
+                  sx={{
+                    height: 80,
+                    borderRadius: "10%",
+                    marginRight: 2,
+                  }}
+                />
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
                   <Typography
                     sx={{
                       color: "#4B2E2A",
@@ -271,46 +305,152 @@ const SavoryPizzaSection = () => {
                   >
                     {formatPizzaName(savoryFlavor)}
                   </Typography>
-                  <Box sx={{ maxHeight: "3rem" }}>
+                  {savoryFlavor.description && (
                     <Typography
-                      component="span"
                       sx={{
                         color: "black",
                         fontFamily: "Tangerine",
-                        marginLeft: 1,
                         fontSize: "1.00rem",
-                        maxHeight: "6rem",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        display: "-webkit-box",
-                        WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 3,
+                        marginTop: "5px",
                       }}
                     >
                       {savoryFlavor.description}
                     </Typography>
+                  )}
+                  {savoryFlavor.observation && (
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        color: "#8B5E3C",
+                        fontFamily: "Tangerine",
+                        fontSize: "0.90rem",
+                        fontWeight: "bold",
+                        marginTop: "5px",
+                      }}
+                    >
+                      * {savoryFlavor.observation}
+                    </Typography>
+                  )}
+                </Box>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+
+        {/* Calzone e Xis Pizza */}
+        <Box
+          sx={{
+            position: "relative",
+            backgroundColor: "rgb(245, 241, 230, 0.9)",
+            borderRadius: "8px",
+            padding: "20px",
+            maxWidth: "900px",
+            margin: "auto",
+            marginTop: "20px",
+          }}
+        >
+          <Typography
+            variant="h1"
+            style={{
+              fontFamily: "Tangerine",
+              fontSize: "2.5rem",
+              marginBottom: "15px",
+              color: "#4B2E2A",
+              fontWeight: "bold",
+            }}
+          >
+            Calzone e Xis Pizza
+          </Typography>
+          <List sx={{ paddingLeft: 2 }}>
+            {calzoneAndXisPizzas.map((item: Pizza, index) => (
+              <ListItem
+                key={index}
+                sx={{
+                  paddingLeft: 0,
+                  display: "flex",
+                  alignItems: "flex-start",
+                  justifyContent: "space-between",
+                  marginBottom: 2,
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "flex-start" }}>
+                  <Box
+                    component="img"
+                    src={item.image}
+                    alt={item.name}
+                    sx={{
+                      height: 80,
+                      width: 120,
+                      borderRadius: "10%",
+                      marginRight: 2,
+                    }}
+                  />
+                  <Box sx={{ display: "flex", flexDirection: "column" }}>
+                    <Typography
+                      sx={{
+                        color: "#4B2E2A",
+                        fontWeight: "bold",
+                        fontFamily: "Tangerine",
+                        fontSize: "1.75rem",
+                      }}
+                    >
+                      {item.name}
+                    </Typography>
+                    {item.description && (
+                      <Typography
+                        sx={{
+                          color: "black",
+                          fontFamily: "Tangerine",
+                          fontSize: "1.00rem",
+                          marginTop: "5px",
+                        }}
+                      >
+                        {item.description}
+                      </Typography>
+                    )}
+                    {item.observation && (
+                      <Typography
+                        variant="caption"
+                        sx={{
+                          color: "#8B5E3C",
+                          fontFamily: "Tangerine",
+                          fontSize: "0.90rem",
+                          fontWeight: "bold",
+                          marginTop: "5px",
+                        }}
+                      >
+                        * {item.observation}
+                      </Typography>
+                    )}
                   </Box>
                 </Box>
 
-                {/* Observation, if any */}
-                {savoryFlavor.observation && (
-                  <Typography
-                    variant="caption"
-                    sx={{
-                      color: "#8B5E3C",
-                      fontFamily: "Tangerine",
-                      marginLeft: 2,
-                      fontSize: "0.90rem",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    * {savoryFlavor.observation}
-                  </Typography>
-                )}
-              </Box>
-            </ListItem>
-          ))}
-        </List>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-end",
+                  }}
+                >
+                  {item.prices?.map((price, idx) => (
+                    <Typography
+                      key={idx}
+                      sx={{
+                        color: "#4B2E2A",
+                        fontFamily: "Tangerine",
+                        fontSize: "1rem",
+                        fontWeight: "bold",
+                        marginBottom: "5px",
+                      }}
+                    >
+                      {price.size}: {price.value}
+                    </Typography>
+                  ))}
+                </Box>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
       </Box>
     </Box>
   );
