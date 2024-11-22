@@ -6,6 +6,9 @@ import oscarLogo from "../assets/background/chef-oscar-logo.jpg";
 import batataFritaImg from "../assets/menu-online/varied-foods/batata-frita.jpeg";
 import bauruImg from "../assets/menu-online/varied-foods/bauru.png";
 import cachorroQuenteImg from "../assets/menu-online/varied-foods/cachorro-quente.jpeg";
+import cachorroQuente3Queij0sImg from "../assets/menu-online/varied-foods/cachorro-quente-3queijos.jpeg";
+import cachorroQuenteLinguicaImg from "../assets/menu-online/varied-foods/cachorro-quente-linguica.jpeg";
+import cachorroQuenteBaconImg from "../assets/menu-online/varied-foods/cachorro-quente-bacon.jpeg";
 import iscaPeixeImg from "../assets/menu-online/varied-foods/isca-peixe.jpg";
 import parmegianaImg from "../assets/menu-online/varied-foods/parmegiana.jpg";
 import peixeGrelhadoImg from "../assets/menu-online/varied-foods/peixe-grelhado.jpg";
@@ -37,9 +40,30 @@ const VariedFoods: Food[] = [
   {
     name: "Cachorro-Quente",
     description:
-      "Salsicha, bacon, queijo, tomate, milho, ervilha, batata-palha, pimenta, maionese, ketchup e mostarda a gosto",
+      "Salsicha, queijo, tomate, milho, ervilha, batata-palha, pimenta, maionese, ketchup e mostarda a gosto",
     image: cachorroQuenteImg,
+    price: "R$ 18,00",
+  },
+  {
+    name: "Cachorro-Quente 3 Queijos",
+    description:
+      "Queijo cheddar, queijo mussarela, queijo gorgonzola, salsicha, queijo, tomate, milho, ervilha, batata-palha, pimenta, orégano, maionese, ketchup e mostarda a gosto",
+    image: cachorroQuente3Queij0sImg,
     price: "R$ 25,00",
+  },
+  {
+    name: "Cachorro-Quente Linguiça Gourmet",
+    description:
+      "Linguiça artesanal, queijo provolone, orégano, salsicha, queijo, tomate, milho, ervilha, batata-palha, pimenta, maionese, ketchup e mostarda a gosto",
+    image: cachorroQuenteLinguicaImg,
+    price: "R$ 26,00",
+  },
+  {
+    name: "Cachorro-Quente Bacon Crocante",
+    description:
+      "Bacon crocante, queijo cheddar, s  alsicha, queijo, tomate, milho, ervilha, batata-palha, pimenta, maionese, ketchup e mostarda a gosto",
+    image: cachorroQuenteBaconImg,
+    price: "R$ 26,00",
   },
   {
     name: "Iscas de Peixe",
@@ -49,9 +73,9 @@ const VariedFoods: Food[] = [
   },
   {
     name: "Parmegiana",
-    description: "Filé empanado, molho vermelho, queijo muçarela e parmesão",
+    description: "Filé empanado, molho vermelho, presunto, queijo muçarela e parmesão",
     image: parmegianaImg,
-    price: "R$ 27,00",
+    price: "R$ 30,00",
   },
   {
     name: "Peixe Grelhado",

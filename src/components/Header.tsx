@@ -30,32 +30,6 @@ const Header = () => (
             textTransform: "none",
           }}
           component={Link}
-          to="/pizzas-salgadas"
-        >
-          Pizzas Salgadas
-        </Button>
-        <Button
-          color="inherit"
-          sx={{ mx: 1 }}
-          style={{
-            fontFamily: "Tangerine",
-            fontSize: "1.1vw",
-            textTransform: "none",
-          }}
-          component={Link}
-          to="/pizzas-doces"
-        >
-          Pizzas Doces
-        </Button>
-        <Button
-          color="inherit"
-          sx={{ mx: 1 }}
-          style={{
-            fontFamily: "Tangerine",
-            fontSize: "1.1vw",
-            textTransform: "none",
-          }}
-          component={Link}
           to="/pratos-variados"
         >
           Pratos Variados

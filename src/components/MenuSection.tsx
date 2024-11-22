@@ -5,7 +5,6 @@ import imgAlaminuta from "../assets/alaminuta.jpeg";
 import imgBauru from "../assets/menu-online/varied-foods/bauru.png";
 import imgCachorroquente from "../assets/menu-online/varied-foods/cachorro-quente.jpeg";
 import imgParmegiana from "../assets/menu-online/varied-foods/parmegiana.jpg";
-import imgPizza from "../assets/pizza.jpeg";
 import imgPratoFeito from "../assets/prato-feito.jpg";
 import imgXis from "../assets/xis.jpeg";
 
@@ -20,7 +19,6 @@ const menuItems: MenuItems[] = [
   { name: "Cachorro-Quente", image: imgCachorroquente },
   { name: "Parmegiana", image: imgParmegiana },
   { name: "Prato Feito", image: imgPratoFeito },
-  { name: "Pizza", image: imgPizza },
   { name: "Xis", image: imgXis },
 ];
 
