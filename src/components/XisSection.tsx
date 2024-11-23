@@ -25,7 +25,12 @@ interface Food {
   price: string;
 }
 
-const xisFlavors: Food[] = [
+interface AdditionalItems {
+  name: string;
+  value: string;
+}
+
+export const XisFlavors: Food[] = [
   {
     name: "Xis Bacon",
     description:
@@ -70,7 +75,22 @@ const xisFlavors: Food[] = [
   },
 ];
 
-const XisSection = () => {
+export const AdditionalItems: AdditionalItems[] = [
+  {
+    name: "Hambúrguer",
+    value: "R$ 5,00",
+  },
+  {
+    name: "Queijo",
+    value: "R$ 3,00",
+  },
+  {
+    name: "Presunto",
+    value: "R$ 2,00",
+  },
+];
+
+export const XisSection = () => {
   return (
     <Box
       sx={{
@@ -93,6 +113,7 @@ const XisSection = () => {
           maxWidth: "800px",
           margin: "auto",
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+          position: "relative",
         }}
       >
         <Typography
@@ -109,7 +130,7 @@ const XisSection = () => {
         </Typography>
 
         <List>
-          {xisFlavors.map((flavor, index) => (
+          {XisFlavors.map((flavor, index) => (
             <ListItem
               key={index}
               sx={{
@@ -180,9 +201,69 @@ const XisSection = () => {
             </ListItem>
           ))}
         </List>
+        {/* Additionals Section - Positioned below the flavors */}
+        <Box
+          sx={{
+            marginLeft: "auto",
+            backgroundColor: "rgba(245, 221, 121, 0.9)",
+            padding: "5px 25px",
+            borderRadius: "8px",
+            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+            width: "fit-content",
+            textAlign: "left",
+          }}
+        >
+          <List>
+            <Typography
+              variant="h6"
+              sx={{
+                color: "#4B2E2A",
+                fontWeight: "bold",
+                fontFamily: "Tangerine",
+                fontSize: "1.5rem",
+                marginBottom: "10px",
+              }}
+            >
+              Adicionais:
+            </Typography>
+
+            {AdditionalItems.map((item, index) => (
+              <ListItem
+                key={index}
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  padding: "0",
+                }}
+              >
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: "#4B2E2A",
+                    fontFamily: "Tangerine",
+                    fontSize: "1.1rem",
+                    flex: 1,
+                  }}
+                >
+                  - {item.name}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: "#4B2E2A",
+                    fontFamily: "Tangerine",
+                    fontSize: ".9rem",
+                    textAlign: "right",
+                    marginLeft: "10px",
+                  }}
+                >
+                  {item.value};
+                </Typography>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
       </Box>
     </Box>
   );
 };
-
-export default XisSection;
