@@ -7,7 +7,7 @@ import ContactSection from "./components/ContactSection.tsx";
 import Header from "./components/Header.tsx";
 import SavoryPizzaSection from "./components/SavoryPizzaSection.tsx";
 import SweetPizzaSection from "./components/SweetPizzaSection.tsx";
-import XisSection from "./components/XisSection.tsx";
+import { XisSection } from "./components/XisSection.tsx";
 import VariedFoodsSections from "./components/VariedFoodsSection.tsx";
 
 function App() {
