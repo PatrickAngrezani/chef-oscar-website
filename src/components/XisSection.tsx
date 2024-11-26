@@ -1,12 +1,4 @@
-import {
-  Avatar,
-  Box,
-  List,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+import { Avatar, Box, List, ListItem, Typography } from "@mui/material";
 import React from "react";
 import oscarLogo from "../assets/background/chef-oscar-logo.jpg";
 
@@ -75,7 +67,7 @@ export const XisFlavors: Food[] = [
   },
 ];
 
-export const AdditionalItems: AdditionalItems[] = [
+export const AdditionalItems_: AdditionalItems[] = [
   {
     name: "Hambúrguer",
     value: "R$ 5,00",
@@ -109,7 +101,7 @@ export const XisSection = () => {
           backgroundColor: "rgba(245, 221, 171, 0.9)",
           borderRadius: "8px",
           padding: "20px",
-          width: "70%",
+          width: { xs: "90%", sm: "80%", md: "70%" },
           maxWidth: "800px",
           margin: "auto",
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
@@ -124,6 +116,7 @@ export const XisSection = () => {
             color: "#4B2E2A",
             fontWeight: "bold",
             marginBottom: "20px",
+            fontSize: { xs: "1.5rem", md: "2rem" },
           }}
         >
           Cardápio de Xis
@@ -135,64 +128,63 @@ export const XisSection = () => {
               key={index}
               sx={{
                 display: "flex",
+                flexDirection: { xs: "column", sm: "row" },
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: { xs: "center", sm: "space-between" },
                 padding: "20px 0",
               }}
             >
-              {/* Image and text */}
-              <Box sx={{ display: "flex", alignItems: "flex-start", flex: 1 }}>
-                <ListItemAvatar>
-                  <Avatar
-                    src={flavor.image || "https://via.placeholder.com/75"}
-                    alt={flavor.name}
-                    variant="rounded"
-                    sx={{
-                      marginLeft: "20px",
-                      width: 75,
-                      height: 75,
-                      marginRight: "15px",
-                      borderRadius: "8px",
-                    }}
-                  />
-                </ListItemAvatar>
-                <ListItemText
-                  primary={
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        color: "#4B2E2A",
-                        fontWeight: "bold",
-                        fontFamily: "Tangerine",
-                        fontSize: "1.5rem",
-                      }}
-                    >
-                      {flavor.name}
-                    </Typography>
-                  }
-                  secondary={
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: "black",
-                        fontFamily: "Tangerine",
-                        marginTop: "5px",
-                        fontSize: "1rem",
-                      }}
-                    >
-                      {flavor.description}
-                    </Typography>
-                  }
-                />
+              {/* Image Section */}
+              <Avatar
+                src={flavor.image || "https://via.placeholder.com/150"}
+                alt={flavor.name}
+                variant="rounded"
+                sx={{
+                  width: { xs: 80, sm: 100 },
+                  height: { xs: 80, sm: 100 },
+                  marginBottom: { xs: "10px", sm: "0" },
+                  borderRadius: "8px",
+                }}
+              />
+              {/* Text Section */}
+              <Box
+                sx={{
+                  textAlign: { xs: "center", sm: "left" },
+                  marginLeft: { xs: "0", sm: "15px" },
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  sx={{
+                    color: "#4B2E2A",
+                    fontWeight: "bold",
+                    fontFamily: "Tangerine",
+                    fontSize: { xs: "1.2rem", sm: "1.5rem" },
+                  }}
+                >
+                  {flavor.name}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: "black",
+                    fontFamily: "Tangerine",
+                    fontSize: { xs: "0.9rem", sm: "1rem" },
+                    marginTop: "5px",
+                  }}
+                >
+                  {flavor.description}
+                </Typography>
               </Box>
-              {/* Price on the right */}
+              {/* Price Section */}
               <Typography
                 sx={{
                   color: "#4B2E2A",
                   fontWeight: "bold",
                   fontFamily: "Tangerine",
-                  fontSize: "1.5rem",
-                  marginLeft: "20px",
+                  fontSize: { xs: "1.2rem", sm: "1.5rem" },
+                  marginTop: { xs: "10px", sm: "0" },
+                  textAlign: { xs: "center", sm: "right" },
                   whiteSpace: "nowrap",
                 }}
               >
@@ -201,12 +193,13 @@ export const XisSection = () => {
             </ListItem>
           ))}
         </List>
-        {/* Additionals Section - Positioned below the flavors */}
+        {/* Additionals Section */}
         <Box
           sx={{
+            marginTop: "20px",
             marginLeft: "auto",
             backgroundColor: "rgba(245, 221, 121, 0.9)",
-            padding: "5px 25px",
+            padding: "5px 15px",
             borderRadius: "8px",
             boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
             width: "fit-content",
@@ -220,20 +213,22 @@ export const XisSection = () => {
                 color: "#4B2E2A",
                 fontWeight: "bold",
                 fontFamily: "Tangerine",
-                fontSize: "1.5rem",
+                fontSize: { xs: "1.2rem", md: "1.5rem" },
                 marginBottom: "10px",
               }}
             >
               Adicionais:
             </Typography>
 
-            {AdditionalItems.map((item, index) => (
+            {AdditionalItems_.map((item, index) => (
               <ListItem
                 key={index}
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  padding: "0",
+                  padding: { xs: "5px 0", sm: "0" },
+                  flexDirection: { xs: "column", sm: "row" },
+                  textAlign: { xs: "center", sm: "left" },
                 }}
               >
                 <Typography
@@ -241,7 +236,7 @@ export const XisSection = () => {
                   sx={{
                     color: "#4B2E2A",
                     fontFamily: "Tangerine",
-                    fontSize: "1.1rem",
+                    fontSize: "1rem",
                     flex: 1,
                   }}
                 >
@@ -252,9 +247,8 @@ export const XisSection = () => {
                   sx={{
                     color: "#4B2E2A",
                     fontFamily: "Tangerine",
-                    fontSize: ".9rem",
-                    textAlign: "right",
-                    marginLeft: "10px",
+                    fontSize: "0.9rem",
+                    marginLeft: { sm: "10px" },
                   }}
                 >
                   {item.value};
