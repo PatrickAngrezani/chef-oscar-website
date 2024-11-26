@@ -73,7 +73,8 @@ const VariedFoods: Food[] = [
   },
   {
     name: "Parmegiana",
-    description: "Filé empanado, molho vermelho, presunto, queijo muçarela e parmesão",
+    description:
+      "Filé empanado, molho vermelho, presunto, queijo muçarela e parmesão",
     image: parmegianaImg,
     price: "R$ 30,00",
   },
@@ -112,7 +113,7 @@ const VariedFoodsSection = () => {
           borderRadius: "8px",
           paddingTop: "10px",
           paddingBottom: "10px",
-          width: "70%",
+          width: { xs: "90%", sm: "80%", md: "70%" },
           maxWidth: "800px",
           margin: "auto",
           marginBottom: "20px",
@@ -127,9 +128,10 @@ const VariedFoodsSection = () => {
             color: "#4B2E2A",
             fontWeight: "bold",
             marginBottom: "20px",
+            fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
           }}
         >
-          Cardápio Variado{" "}
+          Cardápio Variado
         </Typography>
 
         <List>
@@ -140,6 +142,7 @@ const VariedFoodsSection = () => {
                 paddingLeft: 0,
                 display: "flex",
                 alignItems: "center",
+                flexDirection: { xs: "column", sm: "row" },
                 marginBottom: 1,
               }}
             >
@@ -148,22 +151,30 @@ const VariedFoodsSection = () => {
                 src={food.image}
                 alt={food.name}
                 sx={{
-                  marginLeft: "20px",
-                  width: "100px",
-                  height: "80px",
+                  marginLeft: { xs: 0, sm: "20px" },
+                  marginBottom: { xs: "10px", sm: 0 },
+                  width: { xs: "80px", sm: "100px" },
+                  height: { xs: "60px", sm: "80px" },
                   objectFit: "cover",
                   borderRadius: "8px",
-                  marginRight: "20px",
+                  marginRight: { sm: "20px" },
                   flexShrink: 0,
                 }}
               />
-              <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+              <Box
+                sx={{
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: { xs: "center", sm: "left" },
+                }}
+              >
                 <Typography
                   sx={{
                     color: "#4B2E2A",
                     fontWeight: "bold",
                     fontFamily: "Tangerine",
-                    fontSize: "1.75rem",
+                    fontSize: { xs: "1.5rem", sm: "1.75rem" },
                   }}
                 >
                   {food.name}
@@ -173,7 +184,7 @@ const VariedFoodsSection = () => {
                     sx={{
                       color: "black",
                       fontFamily: "Tangerine",
-                      fontSize: "1.00rem",
+                      fontSize: "1rem",
                       marginTop: "5px",
                     }}
                   >
@@ -186,7 +197,7 @@ const VariedFoodsSection = () => {
                     sx={{
                       color: "#8B5E3C",
                       fontFamily: "Tangerine",
-                      fontSize: "0.90rem",
+                      fontSize: "0.9rem",
                       fontWeight: "bold",
                       marginTop: "5px",
                     }}
@@ -200,8 +211,9 @@ const VariedFoodsSection = () => {
                   color: "#4B2E2A",
                   fontWeight: "bold",
                   fontFamily: "Tangerine",
-                  fontSize: "1.5rem",
-                  marginRight: "20px",
+                  fontSize: { xs: "1.25rem", sm: "1.5rem" },
+                  marginTop: { xs: "10px", sm: 0 },
+                  marginRight: { sm: "20px" },
                 }}
               >
                 {food.price}
