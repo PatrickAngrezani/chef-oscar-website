@@ -16,7 +16,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Header = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // Check if screen is small
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleMenuOpen = (event) => {
@@ -35,7 +35,7 @@ const Header = () => {
           style={{
             textAlign: "left",
             fontFamily: "Tangerine",
-            fontSize: isMobile ? "1.5rem" : "1.5vw", // Adjust font size for small screens
+            fontSize: isMobile ? "1.5rem" : "1.5vw",
             fontStyle: "italic",
             minWidth: "unset",
             textTransform: "none",
