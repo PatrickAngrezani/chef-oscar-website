@@ -8,6 +8,8 @@ import XCoracao from "../assets/menu-online/xis/xis-coracao.jpg";
 import XFrango from "../assets/menu-online/xis/xis-frango.jpeg";
 import XSalada from "../assets/menu-online/xis/xis-salada.jpeg";
 import XStrogonoff from "../assets/menu-online/xis/xis-strogonoff.jpeg";
+import QRInstagram from "../assets/logos/qrcode-instagram.jpg";
+import whatsApp from "../assets/logos/whatsapp.jpeg";
 
 interface Food {
   name: string;
@@ -196,17 +198,91 @@ export const XisSection = () => {
         {/* Additionals Section */}
         <Box
           sx={{
-            marginTop: "20px",
-            marginLeft: "auto",
-            backgroundColor: "rgba(245, 221, 121, 0.9)",
-            padding: "5px 15px",
-            borderRadius: "8px",
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
-            width: "fit-content",
-            textAlign: "left",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
-          <List>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <Box
+              component="a"
+              href="https://www.instagram.com/oscarchef52"
+              target="_blank"
+              sx={{
+                textDecoration: "none",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <Box
+                component="img"
+                src={QRInstagram}
+                alt="Instagram QR Code"
+                sx={{
+                  width: "60px",
+                  height: "60px",
+                }}
+              />
+              <Typography
+                sx={{
+                  fontSize: "0.9rem",
+                  fontFamily: "Tangerine",
+                  color: "#4B2E2A",
+                  fontWeight: "bold",
+                }}
+              >
+                @oscarchef52
+              </Typography>
+            </Box>
+            <Box
+              component="a"
+              href="https://wa.me/5551992333927"
+              target="_blank"
+              sx={{
+                textDecoration: "none",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <Box
+                component="img"
+                src={whatsApp}
+                alt="WhatsApp Logo"
+                sx={{
+                  width: "60px",
+                  height: "60px",
+                }}
+              />
+              <Typography
+                sx={{
+                  fontSize: "0.8rem",
+                  fontFamily: "Tangerine",
+                  color: "#4B2E2A",
+                  fontWeight: "bold",
+                }}
+              >
+                (51) 99233-3927 | (51) 3084-9494
+              </Typography>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              backgroundColor: "rgba(245, 221, 121, 0.9)",
+              padding: "5px 15px",
+              borderRadius: "8px",
+              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+              width: "fit-content",
+              textAlign: "left",
+            }}
+          >
             <Typography
               variant="h6"
               sx={{
@@ -220,42 +296,44 @@ export const XisSection = () => {
               Adicionais:
             </Typography>
 
-            {AdditionalItems_.map((item, index) => (
-              <ListItem
-                key={index}
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  padding: { xs: "5px 0", sm: "0" },
-                  flexDirection: { xs: "column", sm: "row" },
-                  textAlign: { xs: "center", sm: "left" },
-                }}
-              >
-                <Typography
-                  variant="body2"
+            <List>
+              {AdditionalItems_.map((item, index) => (
+                <ListItem
+                  key={index}
                   sx={{
-                    color: "#4B2E2A",
-                    fontFamily: "Tangerine",
-                    fontSize: "1rem",
-                    flex: 1,
+                    display: "flex",
+                    justifyContent: "space-between",
+                    padding: { xs: "5px 0", sm: "0" },
+                    flexDirection: { xs: "column", sm: "row" },
+                    textAlign: { xs: "center", sm: "left" },
                   }}
                 >
-                  - {item.name}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "#4B2E2A",
-                    fontFamily: "Tangerine",
-                    fontSize: "0.9rem",
-                    marginLeft: { sm: "10px" },
-                  }}
-                >
-                  {item.value};
-                </Typography>
-              </ListItem>
-            ))}
-          </List>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#4B2E2A",
+                      fontFamily: "Tangerine",
+                      fontSize: "1rem",
+                      flex: 1,
+                    }}
+                  >
+                    - {item.name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#4B2E2A",
+                      fontFamily: "Tangerine",
+                      fontSize: "0.9rem",
+                      marginLeft: { sm: "10px" },
+                    }}
+                  >
+                    {item.value};
+                  </Typography>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
         </Box>
       </Box>
     </Box>
