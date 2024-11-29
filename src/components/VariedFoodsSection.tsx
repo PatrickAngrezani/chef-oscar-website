@@ -13,6 +13,8 @@ import iscaPeixeImg from "../assets/menu-online/varied-foods/isca-peixe.jpg";
 import parmegianaImg from "../assets/menu-online/varied-foods/parmegiana.jpg";
 import peixeGrelhadoImg from "../assets/menu-online/varied-foods/peixe-grelhado.jpg";
 import picadaoImg from "../assets/menu-online/varied-foods/picadao.jpeg";
+import QRInstagram from "../assets/logos/qrcode-instagram.jpg";
+import whatsApp from "../assets/logos/whatsapp.jpeg";
 
 interface Food {
   name: string;
@@ -221,6 +223,83 @@ const VariedFoodsSection = () => {
             </ListItem>
           ))}
         </List>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "20px",
+            marginLeft: "10px",
+            backgroundColor: "rgba(245, 221, 171, 0)",
+            padding: "10px",
+          }}
+        >
+          {/* Instagram */}
+          <Box
+            component="a"
+            href="https://www.instagram.com/oscarchef52"
+            target="_blank"
+            sx={{
+              textDecoration: "none",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              component="img"
+              src={QRInstagram}
+              alt="Instagram"
+              sx={{
+                width: "60px",
+                height: "60px",
+              }}
+            />
+            <Typography
+              sx={{
+                fontSize: "0.9rem",
+                fontFamily: "Tangerine",
+                color: "#4B2E2A",
+                fontWeight: "bold",
+              }}
+            >
+              @oscarchef52
+            </Typography>
+          </Box>
+
+          {/* WhatsApp */}
+          <Box
+            component="a"
+            href="https://wa.me/5551992333927"
+            target="_blank"
+            sx={{
+              textDecoration: "none",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              component="img"
+              src={whatsApp}
+              alt="WhatsApp"
+              sx={{
+                width: "60px",
+                height: "60px",
+              }}
+            />
+            <Typography
+              sx={{
+                fontSize: "0.8rem",
+                fontFamily: "Tangerine",
+                color: "#4B2E2A",
+                fontWeight: "bold",
+              }}
+            >
+              (51) 99233-3927 | (51) 3084-9494
+            </Typography>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
